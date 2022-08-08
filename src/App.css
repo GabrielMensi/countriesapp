@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gantari', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1140px;
+  padding: 0px 15px;
+  margin: auto !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #413F42;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 10px 25px;
+  background: #191919;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.link {
+  color: #ECDBBA;
+  transition: color 0.7s ease-out;
+}
+button:hover .link {
+  color: #191919;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #59CE8F;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.7s ease-out;
+}
+
+button:hover:before {
+  transform: scale(10);
+}
+
+a {
+  text-decoration: none;
+  color: #ECDBBA;
+  width: max-content;
+}
+
+input {
+  padding: 10px 25px;
+  color: #191919;
+  border-radius: 5px;
+  background: #59CE8F;
+  border: none;
+  outline: none;
+  margin-bottom: 50px;
+  cursor: text;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #191919;
+  font-size: 20px;
+}
+
+select {
+  padding: 10px 25px;
+  background: #59CE8F;
+  margin-bottom: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #191919;
+  cursor: pointer;
+  font-size: 20px;
+  width: 287px;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #191919;
+  z-index: 11;
+}
+
+.header h3 {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 25px;
+  color: #59CE8F;
 }

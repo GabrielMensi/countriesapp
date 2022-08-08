@@ -1,0 +1,55 @@
+.wrapper_country-details {
+    margin-top: 120px;
+  }
+  
+  .country-details_container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  
+  .country-details_img,
+  .country-details_description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .country-details_description {
+    margin-left: 50px;
+  }
+  
+  .country-details_description h3 {
+    color: #ECDBBA;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  
+  .country-details_description_items h5 {
+    color: #ECDBBA;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .country-details_description_items h5 span {
+    color: #ECDBBA;
+    opacity: 85%;
+    font-weight: 400;
+  }
+
+  @media (max-width: 1024px) {
+    .country-details_container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .country-details_img,
+    .country-details_description {
+      margin: 0;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
